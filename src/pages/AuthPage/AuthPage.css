@@ -1,0 +1,19 @@
+body {
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .LoginPage {
+    background-color: rgba(0,0,0,.7);
+    max-width: 25rem;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 10% auto;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-family: 'Limelight', cursive;
+    text-align: center;
+  }
+  
