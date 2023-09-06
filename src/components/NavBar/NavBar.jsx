@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
 
-export default function NavBar(user) {
+export default function NavBar({ user }) {
   return (
     <nav>
       <Link to="/" className="nav-link">

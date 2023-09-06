@@ -20,8 +20,8 @@ export default class SignUpForm extends Component {
   
     handleSubmit = async (evt) => {
         try {
-            const {name, email, password} = this.state;
-            const userLogin = {name, email, password};
+            const {username, email, password} = this.state;
+            const userLogin = {username, email, password};
             // The promise returned by the signUp service
             // method will resolve to the user object included
             // in the payload of the JSON Web Token (JWT)
@@ -42,7 +42,7 @@ export default class SignUpForm extends Component {
                 <h1>Sign Up</h1>
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
                     <label>Name</label>
-                    <input type="text" username="username" value={this.state.name} onChange={this.handleChange} required />
+                    <input type="text" name="username" value={this.state.name} onChange={this.handleChange} required />
                     <label>Email</label>
                     <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
                     <label>Password</label>
