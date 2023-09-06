@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Category = require('./category');
+const Actor = require('./actor');
+const Advisory = require('./advisory');
 
 const movieSchema = new Schema({
     title: {type: String},
