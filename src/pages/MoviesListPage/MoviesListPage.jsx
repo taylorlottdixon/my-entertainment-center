@@ -8,7 +8,7 @@ export default function MoviesListPage({ movies }) {
 
   return (
     <>
-      <h1>Movies List Page</h1>
+      <h1>All Movies</h1>
       <div className="MovieList">{movieCards}</div>
     </>
   );
