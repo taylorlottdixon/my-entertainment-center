@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
+const Actor = require('./actor');
+const Movie = require('./movie');
+const Show = require('./show');
+const Viewer = require('./viewer');
 
 const SALT_ROUNDS = 6;
 
@@ -16,7 +20,11 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  viewerProfiles: [{type: Schema.Types.ObjectId, ref: 'Viewer'}],
+  favoriteMovies: [{type: Schema.Types.ObjectId, ref: 'Movie'}],
+  favoriteShows: [{type: Schema.Types.ObjectId, ref: 'Show'}],
+  favoriteActors: [{type: Schema.Types.ObjectId, ref: 'Actor'}],
 }, {
   timestamps: true,
   toJSON: {

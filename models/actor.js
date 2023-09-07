@@ -8,7 +8,14 @@ const actorSchema = new Schema({
     biography: {type: String},
     knownFor: [{type: [Schema.Types.ObjectId], refPath: 'model_type'}],
     filmography: [{type: [Schema.Types.ObjectId], refPath: 'model_type'}],
-    model_type: {type: String, enum: ['Movie', 'Show']}
+    model_type: {type: String, enum: ['Movie', 'Show']},
+    image: {type: String},
+    credits: [{type: [Schema.Types.ObjectId], refPath: 'model_type'}],
+    birthdate: {type: Date},
+    placeOfBirth: {type: String},
+    alias: [{type: String}],
+    favorite: {type: Boolean},
+    tmdbIDRef: {type: Number},
 })
 
 module.exports = mongoose.model('Actor', actorSchema);
