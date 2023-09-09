@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import DashboardPage from '../DashboardPage/DashboardPage';
 import MoviesListPage from '../MoviesListPage/MoviesListPage';
 import * as moviesdb from "../../data.json";
 import NavBar from '../../components/NavBar/NavBar';
