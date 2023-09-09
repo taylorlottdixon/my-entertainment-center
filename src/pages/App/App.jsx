@@ -4,7 +4,7 @@ import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import MoviesListPage from '../MoviesListPage/MoviesListPage';
-import { movies } from "../../data.js";
+import * as moviesdb from "../../data.json";
 import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
@@ -16,7 +16,8 @@ export default function App() {
         <>
           <NavBar user={user} />
           <Routes>
-            <Route path="/movies" element={<MoviesListPage user={user} setUser={setUser} movies={movies} />} />
+            <Route path="/dashboard" element={<DashboardPage user={user} moviesdb={moviesdb} />} />
+            <Route path="/movies" element={<MoviesListPage moviesdb={moviesdb} user={user} setUser={setUser} />} />
             {/* <Route /> */}
           </Routes>
         </>

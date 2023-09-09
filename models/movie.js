@@ -5,7 +5,7 @@ const Actor = require('./actor');
 const Advisory = require('./advisory');
 
 const movieSchema = new Schema({
-    title: {type: String},
+    title: {type: String, required: true},
     tagline: {type: String},
     overview: {type: String},
     released: {type: Date},
@@ -14,7 +14,7 @@ const movieSchema = new Schema({
     length: {type: String},
     poster: {type: String},
     cast: [{type: Schema.Types.ObjectId, ref: 'Actor'}],
-    tmdbIDRef: {type: Number},
+    tmdbIDRef: {type: Number, required: true},
     mecRatingAgg: [{
         advisory: {type: Schema.Types.ObjectId, ref: 'Advisory'},
         score: {type: Number}

@@ -1,3 +1,6 @@
+import sendRequest from "./send-request";
+const BASE_URL = '/api/movies';
+
 export async function trendingMovies(time_window){
     const fetch = require('node-fetch');
 
@@ -14,4 +17,9 @@ export async function trendingMovies(time_window){
         .then(res => res.json())
         .then(json => console.log(json))
         .catch(err => console.error('error:' + err));
+}
+
+
+export async function create(movieData) {
+  return sendRequest(BASE_URL, 'POST', movieData);
 }

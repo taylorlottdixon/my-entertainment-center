@@ -10,7 +10,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 // GET all movies from TMDB -- getAll()
 
 // POST all new movies from TMDB -- create()
-
+router.post('/', moviesCtrl.create)
 // UPDATE all movies from TMDB -- edit()
 
 // DELETE movie -- delete()

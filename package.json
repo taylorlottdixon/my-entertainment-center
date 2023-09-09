@@ -9,6 +9,7 @@
     "bcrypt": "^5.1.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.0",
     "morgan": "^1.10.0",
@@ -61,5 +62,10 @@
     "license": "MIT",
     "homepage": "https://github.com/cavestri/themoviedb-javascript-library"
   },
-  "proxy": "http://172.22.32.1:3001"
+  "proxy": "http://172.22.32.1:3001",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
 }

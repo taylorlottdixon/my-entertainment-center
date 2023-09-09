@@ -19,17 +19,19 @@ module.exports = {
 };
 
 function getAll() {
-    for (let i = -2147483648; i < 2147483648; i++) {
-        movie = theMovieDb.movies.getById({"id":i}, successCB, errorCB)
-        return movie
-    }
+
 }
 
-function successCB(data) {
-	console.log("Success callback: " + data);
-    return data
-};
-        
-function errorCB(data) {
-        	console.log("Error callback: " + data);
-    };
+async function create(req, res) {
+    try {
+        // Add the user to the db
+        const movie = await Movie.create(req.body);
+        // token will be a string
+        const token = createJWT(movie);
+        // Yes, we can serialize a string
+        res.json(token);
+      } catch (err) {
+        // Probably a dup email
+        res.status(400).json(err);
+      }
+}
