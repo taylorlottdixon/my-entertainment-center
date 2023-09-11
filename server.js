@@ -9,6 +9,7 @@ require('./config/database');
 const app = express();
 
 const port = process.env.PORT || 3001;
+const mongoURI = process.env.DATABASE_URL;
 
 app.use(logger('dev'));
 app.use(express.json());
