@@ -66,6 +66,7 @@
     "license": "MIT",
     "homepage": "https://github.com/cavestri/themoviedb-javascript-library"
   },
+  "proxy": "localhost:3001",
   "browser": {
     "fs": false,
     "path": false,
