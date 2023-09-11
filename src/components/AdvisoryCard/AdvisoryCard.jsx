@@ -35,11 +35,13 @@ export default function AdvisoryCard({ movie }) {
             <div>
                 <h3>MEC Ratings</h3>
                 <div>
-                    <h4>Violence</h4>
-                    <div className='violence'>{userViolence === "unrated" ? 
-                    <p>unrated</p>
-                    :
-                    <></>}
+                    <h4>Violence ({userViolence})</h4>
+                    <div className='violence'>
+                        {userViolence < 1 ? 
+                        <img src='../../../public/images/violence-gray.png' alt='0 violence' />
+                        :
+                        <img src='../../../../public/images/violence.png' alt='violence rating 1' />
+                        }
                     </div>
                     <h4>Language</h4>
                     <h4>Sexual Content</h4>
