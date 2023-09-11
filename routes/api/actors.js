@@ -5,6 +5,8 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // All paths start with '/api/actors'
 
+router.get('/', actorsCtrl.index)
+router.get('/:actorName', actorsCtrl.show)
 
 //// Routes for daily database maintenance
 // GET all actors from TMDB -- getAll()

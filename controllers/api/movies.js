@@ -1,27 +1,34 @@
 const Movie = require('../../models/movie');
-import * as theMovieDb from "../../themoviedb";
 
 module.exports = {
-    getAll,
+    index,
     create,
-    edit,
-    delete: deleteMovie,
-    addFav,
-    removeFav,
-    viewFav,
-    viewOwned,
+    show,
+    // edit,
+    // delete: deleteMovie,
+    // addFav,
+    // removeFav,
+    // viewFav,
+    // viewOwned,
     viewTrend,
-    detail,
-    addRating,
-    editRating,
-    removeRating,
-    calcMEC,
+    // detail,
+    // addRating,
+    // editRating,
+    // removeRating,
+    // calcMEC,
 };
 
-function getAll() {
-
+async function index(req, res) {
+    const movies = await Movie.find({}).sort('title').exec();
+    // re-sort based upon the sortOrder of the populated categories
+    res.json(movies);
 }
-
+  
+async function show(req, res) {
+    const movie = await Movie.findById(req.params.id);
+    res.json(movie);
+}
+  
 async function create(req, res) {
     try {
         // Add the user to the db
@@ -31,7 +38,15 @@ async function create(req, res) {
         // Yes, we can serialize a string
         res.json(token);
       } catch (err) {
-        // Probably a dup email
         res.status(400).json(err);
       }
+}
+
+async function viewTrend(req, res) {
+    try {
+        const movie = await Movie.find(req.body);
+        res.json(movie);
+    } catch (err) {
+        res.status(400).json(err);
+    }
 }

@@ -5,7 +5,7 @@ const Show = require('./show');
 
 const actorSchema = new Schema({
     name: {type: String},
-    biography: {type: String},
+    bio: {type: String},
     knownFor: [{type: [Schema.Types.ObjectId], refPath: 'model_type'}],
     filmography: [{type: [Schema.Types.ObjectId], refPath: 'model_type'}],
     model_type: {type: String, enum: ['Movie', 'Show']},

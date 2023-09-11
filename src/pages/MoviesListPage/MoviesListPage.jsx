@@ -5,9 +5,6 @@ import "../MoviesListPage/MoviesListPage.css";
 
 
 export default function MoviesListPage({ movies }) {
-    // const movieids = moviedata.map(a => a.id)
-//     const trendingMovies = useState([])
-  
 //     const movieCards = movies.map((movie, index) => (
 //     <MovieCard movie={movie} index={index} key={index} />
 //   ));

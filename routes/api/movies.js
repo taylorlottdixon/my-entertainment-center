@@ -6,6 +6,10 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 // All paths start with '/api/movies'
 
 
+// GET all movies from my database
+router.get('/', moviesCtrl.index)
+router.get('/:movieName', moviesCtrl.show)
+
 //// Routes for daily database maintenance
 // GET all movies from TMDB -- getAll()
 
@@ -22,6 +26,7 @@ router.post('/', moviesCtrl.create)
 // GET owned movies -- viewOwned()
 
 // GET trending movies -- viewTrend()
+router.get('/', moviesCtrl.viewTrend)
 
 // GET movie by id -- detail()
 

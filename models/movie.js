@@ -11,9 +11,13 @@ const movieSchema = new Schema({
     released: {type: Date},
     categories: [{type: Schema.Types.ObjectId, ref: 'Category'}],
     mpaaRating: {type: String},
-    length: {type: String},
+    length: {type: Number},
     poster: {type: String},
-    cast: [{type: Schema.Types.ObjectId, ref: 'Actor'}],
+    cast: [
+        {
+            actor: {type: Schema.Types.ObjectId, ref: 'Actor'},
+            role: {type: String},
+        }],
     tmdbIDRef: {type: Number, required: true},
     mecRatingAgg: [{
         advisory: {type: Schema.Types.ObjectId, ref: 'Advisory'},

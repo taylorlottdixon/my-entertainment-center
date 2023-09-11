@@ -4,7 +4,7 @@ import "./NavBar.scss";
 export default function NavBar({ user }) {
   return (
     <nav>
-      <Link to="/" className="nav-link">
+      <Link to="/dashboard" className="nav-link">
         Dashboard
       </Link>
       <Link to="/movies" className="nav-link">

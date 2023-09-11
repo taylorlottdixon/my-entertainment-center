@@ -1,5 +1,5 @@
 import sendRequest from "./send-request";
-const BASE_URL = '/api/movies';
+const BASE_URL = '/api/actors';
 
 export function getAll() {
     return sendRequest(BASE_URL);
@@ -7,8 +7,4 @@ export function getAll() {
 
 export function getById(id) {
     return sendRequest(`${BASE_URL}/${id}`);
-}
-
-export function getAdvisory() {
-    let advisories
 }
