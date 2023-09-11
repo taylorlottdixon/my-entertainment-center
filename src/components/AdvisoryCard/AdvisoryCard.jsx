@@ -34,22 +34,71 @@ export default function AdvisoryCard({ movie }) {
         <>
             <div>
                 <h3>MEC Ratings</h3>
-                <div>
+                <div className='ratings'>
                     <h4>Violence ({userViolence})</h4>
                     <div className='violence'>
                         {userViolence < 1 ? 
-                        <img src='../../../public/images/violence-gray.png' alt='0 violence' />
+                        <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
                         :
-                        <img src='../../../../public/images/violence.png' alt='violence rating 1' />
+                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        }
+                        {userViolence < 2 ? 
+                        <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
+                        :
+                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        }
+                        {userViolence < 3 ? 
+                        <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
+                        :
+                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        }
+                        {userViolence < 4 ? 
+                        <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
+                        :
+                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        }
+                        {userViolence < 5 ? 
+                        <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
+                        :
+                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
                         }
                     </div>
                     <h4>Language</h4>
+                    <div className='language'>
+                        {userLanguage < 1 ? 
+                        <img src='/images/language-gray.png' alt='0 language' width="30rem" />
+                        :
+                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        }
+                        {userLanguage < 2 ? 
+                        <img src='/images/language-gray.png' alt='0 language' width="30rem" />
+                        :
+                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        }
+                        {userLanguage < 3 ? 
+                        <img src='/images/language-gray.png' alt='0 language' width="30rem" />
+                        :
+                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        }
+                        {userLanguage < 4 ? 
+                        <img src='/images/language-gray.png' alt='0 language' width="30rem" />
+                        :
+                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        }
+                        {userLanguage < 5 ? 
+                        <img src='/images/language-gray.png' alt='0 language' width="30rem" />
+                        :
+                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        }
+                    </div>
                     <h4>Sexual Content</h4>
                     {/* <h4>Suicidal Themes</h4>
                     <h4>Death</h4>
                     <h4>Sexual Violence</h4>
                     <h4>Infidelity</h4>
                     <h4>Racism</h4> */}
+                    <h4>Notes</h4>
+                    <p></p>
                 </div>
             </div>
             <AdvisoryForm userViolence={userViolence} setUserViolence={setUserViolence} />
