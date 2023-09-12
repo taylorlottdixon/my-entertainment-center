@@ -45,22 +45,22 @@ export default function AdvisoryCard({ movie }) {
                         {userViolence < 2 ? 
                         <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
                         :
-                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        <img src='/images/violence.png' alt='violence rating 2' width="30rem" />
                         }
                         {userViolence < 3 ? 
                         <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
                         :
-                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        <img src='/images/violence.png' alt='violence rating 3' width="30rem" />
                         }
                         {userViolence < 4 ? 
                         <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
                         :
-                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        <img src='/images/violence.png' alt='violence rating 4' width="30rem" />
                         }
                         {userViolence < 5 ? 
                         <img src='/images/violence-gray.png' alt='0 violence' width="30rem" />
                         :
-                        <img src='/images/violence.png' alt='violence rating 1' width="30rem" />
+                        <img src='/images/violence.png' alt='violence rating 5' width="30rem" />
                         }
                     </div>
                     <h4>Language</h4>
@@ -92,6 +92,33 @@ export default function AdvisoryCard({ movie }) {
                         }
                     </div>
                     <h4>Sexual Content</h4>
+                    <div className='sex'>
+                        {userSex < 1 ? 
+                        <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
+                        :
+                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        }
+                        {userSex < 2 ? 
+                        <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
+                        :
+                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        }
+                        {userSex < 3 ? 
+                        <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
+                        :
+                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        }
+                        {userSex < 4 ? 
+                        <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
+                        :
+                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        }
+                        {userSex < 5 ? 
+                        <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
+                        :
+                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        }
+                    </div>
                     {/* <h4>Suicidal Themes</h4>
                     <h4>Death</h4>
                     <h4>Sexual Violence</h4>

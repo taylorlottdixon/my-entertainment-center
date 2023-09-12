@@ -14,7 +14,7 @@ import NavBar from '../../components/NavBar/NavBar';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [moviesList, setMoviesList] = useState([]);
-  const [actorsList, setActorsList] = useState([])
+  const [actorsList, setActorsList] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
@@ -25,27 +25,24 @@ export default function App() {
       const actors = await actorsAPI.getAll();
       setActorsList(actors);
     }
+    console.log(moviesList)
     getMovies();
     getActors();
   }, []);
 
+  console.log(moviesList)
   console.log(actorsList)
 
   return (
     <main className="App">
-      { user ?
-        <>
           <NavBar user={user} />
           <Routes>
-            <Route path="/*" element={<DashboardPage user={user} moviesList={moviesList} />} />
-            <Route path="/movies" element={<MoviesListPage moviesList={moviesList} user={user} setUser={setUser} />} />
+            <Route path="/*" element={<MoviesListPage moviesList={moviesList} user={user} setUser={setUser} />} />
+            <Route path="/dashboard" element={<DashboardPage user={user} moviesList={moviesList} />} />
             <Route path="/movies/:movieName" element={<MovieDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
             <Route path="/actors/:actorName" element={<ActorDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
+            <Route path="/signin" element={<AuthPage setUser={setUser} />} />
           </Routes>
-        </>
-        :
-        <AuthPage setUser={setUser} />
-      }
     </main>
   );
 }

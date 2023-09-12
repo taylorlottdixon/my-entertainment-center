@@ -1,3 +1,62 @@
-.MovieCard > h3 {
-    font-size: 12px;
+.MovieList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.SmallMovieCard {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+    height: 150px;
+    margin: .8rem;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 3px 3px goldenrod;
+}
+  
+.movie-list-title {
+    width: 100px;
+    margin-top: 1rem;
+    height: fit-content;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.2)
+    );
+    padding: 1rem 0 1rem 0;
+  }
+  
+.movie-list-release {
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.2)
+    );
+    padding: 0.5rem 0 0.5rem 0;
+    height: fit-content;
+  }
+  
+.SmallMovieCard:hover {
+    transform: scale(1.1);
+    box-shadow: 8px 5px 5px goldenrod;
+    transition: ease-in 100ms;
+  }
+ 
+h3 {
+    font-size: 1rem;
+}
+
+h3:hover {
+    transform: none;
 }

@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import "./ActorDetailPage.css";
+import "./ActorDetailPage.scss";
 
 export default function ActorDetailPage({ moviesList, actorsList }) {
   let { actorName } = useParams();
@@ -19,6 +19,14 @@ export default function ActorDetailPage({ moviesList, actorsList }) {
     return `/movies/${movie}`;
   }
 
+  function moviePoster(poster) {
+    return `https://image.tmdb.org/t/p/original/${poster}`;
+  }
+
+
+
+  let imageURL = `https://image.tmdb.org/t/p/original/${thisActor.imagePath}`
+
   return (
     <div className="ActorDetail">
       <h1 className="actor-title">{thisActor.name}</h1>
@@ -28,10 +36,12 @@ export default function ActorDetailPage({ moviesList, actorsList }) {
           {actorMovies.map((movie) => (
             <li key={movie.title}>
               <Link to={movieURL(movie.title)}>{movie.title}</Link>
+              <img src={moviePoster(movie.poster)} className="movies-poster" />
             </li>
           ))}
         </ul>
       </div>
+      <img className="actor-image" src={imageURL} />
     </div>
   );
 }

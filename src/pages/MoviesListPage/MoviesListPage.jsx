@@ -4,15 +4,15 @@ import "../MoviesListPage/MoviesListPage.css";
 
 
 
-export default function MoviesListPage({ movies }) {
-//     const movieCards = movies.map((movie, index) => (
-//     <MovieCard movie={movie} index={index} key={index} />
-//   ));
+export default function MoviesListPage({ moviesList }) {
+    const movieCards = moviesList.map((movie, index) => (
+    <MovieCard movie={movie} index={index} key={index} />
+  ));
 
   return (
     <>
       <h1>All Movies</h1>
-      {/* <div className="MovieList">{movieCards}</div> */}
+      <div className="MovieList">{movieCards}</div>
     </>
   );
 }

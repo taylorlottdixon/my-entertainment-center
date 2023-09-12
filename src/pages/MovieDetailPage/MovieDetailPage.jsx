@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import "./MovieDetailPage.css";
+import "./MovieDetailPage.scss";
 import { getAdvisory } from "../../utilities/movies-api";
 import { useState } from "react";
 import AdvisoryCard from "../../components/AdvisoryCard/AdvisoryCard"; 
