@@ -12,16 +12,16 @@ export default function NavBar({ user }) {
           <Link to="/movies" className="nav-link">
             All Movies
           </Link>
-          <Link to="/actors" className="nav-link">
+          {/* <Link to="/actors" className="nav-link">
             All Actors
           </Link>
           <Link to="/myec" className="nav-link">
             My eCenter
-          </Link>
-          <Link to="/profile" className="nav-link">
+          </Link> */}
+          {/* <Link to="/profile" className="nav-link right">
             Profile
-          </Link>
-          <Link to="/logout" className="nav-link">
+          </Link> */}
+          <Link to="/logout" className="nav-link right">
             Logout
           </Link>
         </>

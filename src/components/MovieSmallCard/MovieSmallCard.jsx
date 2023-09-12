@@ -17,7 +17,7 @@ export default function MovieSmallCard({ movie, index }) {
           backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster})`,
         }}
       >
-        <h3 className="movie-list-title">{movieName}</h3>
+        <h3 className="movie-smcard-title">{movieName}</h3>
       </div>
     </Link>
   );

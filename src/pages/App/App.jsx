@@ -10,6 +10,7 @@ import MoviesListPage from '../MoviesListPage/MoviesListPage';
 import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
 import ActorDetailPage from '../ActorDetailPage/ActorDetailPage';
 import NavBar from '../../components/NavBar/NavBar';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/movies/:movieName" element={<MovieDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
             <Route path="/actors/:actorName" element={<ActorDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
             <Route path="/signin" element={<AuthPage setUser={setUser} />} />
+            <Route path="/logout" element={<UserLogOut user={user} setUser={setUser} />} />
           </Routes>
     </main>
   );

@@ -5,16 +5,16 @@ nav {
     background: rgba(0, 0, 0, 0.7);
     padding-left: 2rem;
     padding-right: 2rem;
-  }
+}
   
-  nav p {
+ nav p {
     float: right;
     text-align: center;
     align-self: center;
     margin-left: auto;
-  }
+ }
   
-  .nav-link {
+.nav-link {
     margin: 1rem;
     color: goldenrod;
     text-decoration: none;
@@ -22,11 +22,16 @@ nav {
     border: 1px solid goldenrod;
     text-align: center;
     align-self: center;
-  }
+}
   
-  .nav-link:hover {
+.nav-link:hover {
     transition: ease 100ms;
     border: 2px solid goldenrod;
     font-weight: 500;
     background-color: rgb(49, 47, 47);
-  }
+}
+
+.right {
+  float: right;
+  margin-left: auto;
+}

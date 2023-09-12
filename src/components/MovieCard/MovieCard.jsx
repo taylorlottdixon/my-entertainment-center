@@ -16,7 +16,7 @@ export default function MovieCard({ movie, index }) {
           backgroundImage: `url(${moviePoster})`
         }}
       >
-        <h3 className="movie-list-title">{movie.title}</h3>
+        <h3 className="movie-card-title">{movie.title}</h3>
         <br></br>
         <p className="movie-list-release">Released: {moment(movie.released).format('M/D/YYYY')}</p>
       </div>
