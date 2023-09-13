@@ -1,12 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import "./MovieDetailPage.scss";
-import { getAdvisory } from "../../utilities/movies-api";
-import { useState } from "react";
+
 import AdvisoryCard from "../../components/AdvisoryCard/AdvisoryCard"; 
 
 export default function MovieDetailPage({ moviesList, actorsList }) {
-    const [advisory, setAdvisory] = useState(getAdvisory())
-    
+
     let { movieName } = useParams();
     const moment = require('moment')
 
