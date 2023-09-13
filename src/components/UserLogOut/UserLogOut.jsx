@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router';
 import { logOut } from '../../utilities/users-service';
 
 export default function UserLogOut({ user, setUser }) {
   function handleLogOut() {
     logOut();
     setUser(null);
+    useNavigate("/login")
   }
 
   return (
