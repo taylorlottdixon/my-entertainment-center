@@ -36,15 +36,18 @@ export default function App() {
 
   return (
     <main className="App">
-          <NavBar user={user} />
-          <Routes>
-            <Route path="/*" element={<MoviesListPage moviesList={moviesList} user={user} setUser={setUser} />} />
-            <Route path="/dashboard" element={<DashboardPage user={user} moviesList={moviesList} />} />
-            <Route path="/movies/:movieName" element={<MovieDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
-            <Route path="/actors/:actorName" element={<ActorDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
-            <Route path="/signin" element={<AuthPage setUser={setUser} />} />
-            <Route path="/logout" element={<UserLogOut user={user} setUser={setUser} />} />
-          </Routes>
+      <NavBar user={user} />
+      { user ?
+        <Routes>
+          <Route path="/*" element={<MoviesListPage moviesList={moviesList} user={user} setUser={setUser} />} />
+          <Route path="/dashboard" element={<DashboardPage user={user} moviesList={moviesList} />} />
+          <Route path="/movies/:movieName" element={<MovieDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
+          <Route path="/actors/:actorName" element={<ActorDetailPage actorsList={actorsList} moviesList={moviesList} user={user} />} />
+          <Route path="/logout" element={<UserLogOut user={user} setUser={setUser} />} />
+        </Routes>
+        :
+        <AuthPage setUser={setUser} />
+      }
     </main>
   );
 }

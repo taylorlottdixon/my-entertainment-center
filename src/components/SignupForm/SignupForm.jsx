@@ -1,7 +1,6 @@
 import { Component } from "react";
 import { signUp } from '../../utilities/users-service';
 import "../../pages/AuthPage/AuthPage.css";
-import { useNavigate } from "react-router";
 
 export default class SignUpForm extends Component {
     state = {
@@ -28,7 +27,6 @@ export default class SignUpForm extends Component {
             // in the payload of the JSON Web Token (JWT)
             const user = await signUp(userLogin);
             this.props.setUser(user);
-            useNavigate("/dashboard")
         } catch {
             // An error occurred
             // Probably due to a duplicate email
