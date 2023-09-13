@@ -9,10 +9,12 @@ My Entertainment Center is a movie database that allows users to give advisory r
 
 ## Technology Used
 MERN Stack
+<br>
 The Movie Database API (https://developer.themoviedb.org)
 
 ## Getting Started
 [Launch the game](https://my-entertainment-center-e89b41a797a6.herokuapp.com/)
+<br>
 [Trello Board](https://trello.com/b/zooWMOLc/my-entertainment-center-main)
 
 ### Next Steps
