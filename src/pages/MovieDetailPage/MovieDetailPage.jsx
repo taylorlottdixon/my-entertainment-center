@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import "./MovieDetailPage.scss";
-
+import "./MovieDetailPage.css";
 import AdvisoryCard from "../../components/AdvisoryCard/AdvisoryCard"; 
 
 export default function MovieDetailPage({ moviesList, actorsList }) {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./NavBar.scss";
+import "./NavBar.css";
 
 export default function NavBar({ user }) {
   return (
@@ -27,9 +27,9 @@ export default function NavBar({ user }) {
         </>
       :
       <>
-        <Link to="/movies" className="nav-link">
+        {/* <Link to="/movies" className="nav-link">
           All Movies
-        </Link>
+        </Link> */}
         <Link to="/signin" className="nav-link">
           Login
         </Link>

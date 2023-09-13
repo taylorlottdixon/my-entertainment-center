@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MovieSmallCard.scss"
+import "./MovieSmallCard.css"
 
 export default function MovieSmallCard({ movie, index }) {
   const movieName = movie.title;

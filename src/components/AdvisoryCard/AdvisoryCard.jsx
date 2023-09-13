@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from "react-router-dom";
-import "./AdvisoryCard.scss"
+import "./AdvisoryCard.css"
 import { FaEdit } from "react-icons/fa";
 import AdvisoryForm from "./AdvisoryForm"
 

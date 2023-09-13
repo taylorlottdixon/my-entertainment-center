@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import "./ActorDetailPage.scss";
+import "./ActorDetailPage.css";
 
 export default function ActorDetailPage({ moviesList, actorsList }) {
   let { actorName } = useParams();
