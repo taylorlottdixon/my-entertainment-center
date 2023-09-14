@@ -97,22 +97,22 @@ export default function AdvisoryCard({ movie }) {
                         {userLanguage < 2 ? 
                         <img src='/images/language-gray.png' alt='0 language' width="30rem" />
                         :
-                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        <img src='/images/language.png' alt='language rating 2' width="30rem" />
                         }
                         {userLanguage < 3 ? 
                         <img src='/images/language-gray.png' alt='0 language' width="30rem" />
                         :
-                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        <img src='/images/language.png' alt='language rating 3' width="30rem" />
                         }
                         {userLanguage < 4 ? 
                         <img src='/images/language-gray.png' alt='0 language' width="30rem" />
                         :
-                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        <img src='/images/language.png' alt='language rating 4' width="30rem" />
                         }
                         {userLanguage < 5 ? 
                         <img src='/images/language-gray.png' alt='0 language' width="30rem" />
                         :
-                        <img src='/images/language.png' alt='language rating 1' width="30rem" />
+                        <img src='/images/language.png' alt='language rating 5' width="30rem" />
                         }
                     </div>
                     <div className='advisory-title'>
@@ -130,22 +130,22 @@ export default function AdvisoryCard({ movie }) {
                         {userSex < 2 ? 
                         <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
                         :
-                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        <img src='/images/sex.png' alt='sex rating 2' width="30rem" />
                         }
                         {userSex < 3 ? 
                         <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
                         :
-                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        <img src='/images/sex.png' alt='sex rating 3' width="30rem" />
                         }
                         {userSex < 4 ? 
                         <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
                         :
-                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        <img src='/images/sex.png' alt='sex rating 4' width="30rem" />
                         }
                         {userSex < 5 ? 
                         <img src='/images/sex-gray.png' alt='0 sex' width="30rem" />
                         :
-                        <img src='/images/sex.png' alt='sex rating 1' width="30rem" />
+                        <img src='/images/sex.png' alt='sex rating 5' width="30rem" />
                         }
                     </div>
                     {/* <h4>Suicidal Themes</h4>
@@ -153,8 +153,6 @@ export default function AdvisoryCard({ movie }) {
                     <h4>Sexual Violence</h4>
                     <h4>Infidelity</h4>
                     <h4>Racism</h4> */}
-                    {/* <h4>Notes</h4> */}
-                    <p></p>
                 </div>
             </div>
         </>
